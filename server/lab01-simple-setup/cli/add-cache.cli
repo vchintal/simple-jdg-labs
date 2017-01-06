@@ -1,0 +1,2 @@
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/local-cache-configuration=local:add()
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/local-cache=localCache:add(configuration=local)

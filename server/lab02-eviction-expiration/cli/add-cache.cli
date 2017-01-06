@@ -1,0 +1,4 @@
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/local-cache-configuration=bounded:add()
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/local-cache-configuration=bounded/eviction=EVICTION:add(size=50,strategy=LRU,type=COUNT)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/local-cache-configuration=bounded/expiration=EXPIRATION:add(interval=100,lifespan=10000)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/local-cache=boundedCache:add(configuration=bounded)
