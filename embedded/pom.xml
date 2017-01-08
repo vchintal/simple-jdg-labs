@@ -17,5 +17,7 @@
   	<module>lab01-simple-setup</module>
   	<module>lab02-eviction-expiration</module>
   	<module>lab03-clustering</module>
+  	<module>lab04-listeners-notification</module>
+  	<module>lab05-persistence</module>
   </modules>
 </project>

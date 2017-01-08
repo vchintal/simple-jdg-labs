@@ -1,0 +1,3 @@
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/distributed-cache-configuration=distributed:add(mode="SYNC")
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/replicated-cache=replCache:add(configuration=replicated)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/distributed-cache=distCache:add(configuration=distributed)

@@ -7,7 +7,6 @@
 	<cache-container>
 		<transport stack="external-file" />
 		<distributed-cache name="distCache" mode="SYNC" />
-		<replicated-cache name="replCache" mode="SYNC" />
 	</cache-container>
 </infinispan>
 

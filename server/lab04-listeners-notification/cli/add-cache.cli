@@ -1,0 +1,4 @@
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/replicated-cache-configuration=listener:add()
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/replicated-cache-configuration=listener/compatibility=COMPATIBILITY:add(enabled=true)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/replicated-cache=listenerCache:add(configuration=listener)
+:reload-servers
