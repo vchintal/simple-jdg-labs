@@ -18,15 +18,17 @@ public class JDGRemoteClientConsoleApp {
         Configuration configuration = new ConfigurationBuilder().build();
 
         RemoteCacheManager cacheManager = new RemoteCacheManager(configuration);
-        RemoteCache<String, String> remoteCache = cacheManager.getCache("boundedCache");
+        RemoteCache<String, String> persistentCache = cacheManager.getCache("persistentCache");
+        RemoteCache<String, String> persistentPassivatedCache = cacheManager.getCache("persistentPassivatedCache");
 
-        IntStream.range(1, 76).parallel().forEach( i -> remoteCache.put("key"+i, "value"+i));
+        IntStream.range(1, 10501).parallel().forEach( i -> {
+            persistentCache.put("key"+i, "value"+i);
+            persistentPassivatedCache.put("key"+i, "value"+i);
+        });
 
-        logger.info("The size of the cache before expiration is : {}", remoteCache.size());
-
-        Thread.sleep(11000);
-
-        logger.info("The size of the cache after expiration is : {}", remoteCache.size());
+        logger.info("The size of the {} cache is : {} and of {} cache is {}"
+                ,"persistentCache", persistentCache.size()
+                ,"persistentPassivatedCache", persistentPassivatedCache.size());
         cacheManager.stop();
     }
 }

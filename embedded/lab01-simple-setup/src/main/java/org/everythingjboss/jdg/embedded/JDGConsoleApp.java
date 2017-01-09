@@ -13,21 +13,26 @@ import org.infinispan.manager.EmbeddedCacheManager;
 
 public class JDGConsoleApp {
 
-	private static final Logger logger = LogManager.getLogger(JDGConsoleApp.class);
+    private static final Logger logger = LogManager.getLogger(JDGConsoleApp.class);
 
-	public static void main(String[] args) throws IOException {
-		Configuration configuration = new ConfigurationBuilder()
-				.clustering()
-				.cacheMode(CacheMode.LOCAL).build();
+    public static void main(String[] args) throws IOException {
 
-		EmbeddedCacheManager cacheManager = new DefaultCacheManager(configuration);
-		Cache<String, String> cache = cacheManager.getCache("localCache");
-		
-		cache.put("1", "One");
-		cache.put("2", "Two");
-		logger.info("The size of the cache is : {}, mode of the cache is : {} ", cache.size(),
-				cache.getCacheConfiguration().clustering().cacheMode());
-		
-		cacheManager.stop();
-	}
+        // Use the following configuration for programmatic instantiation of the
+        // DefaultCacheManager
+        Configuration configuration = new ConfigurationBuilder()
+                .clustering()
+                .cacheMode(CacheMode.LOCAL)
+                .build();
+
+        // Pass in string literal "infinispan.xml" for declarative c
+        EmbeddedCacheManager cacheManager = new DefaultCacheManager(configuration);
+        Cache<String, String> cache = cacheManager.getCache("localCache");
+
+        cache.put("1", "One");
+        cache.put("2", "Two");
+        logger.info("The size of the cache is : {}, mode of the cache is : {} ", cache.size(),
+                cache.getCacheConfiguration().clustering().cacheMode());
+
+        cacheManager.stop();
+    }
 }

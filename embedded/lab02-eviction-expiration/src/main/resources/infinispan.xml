@@ -1,13 +1,12 @@
-<infinispan
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="urn:infinispan:config:8.2 http://www.infinispan.org/schemas/infinispan-config-8.2.xsd"
-        xmlns="urn:infinispan:config:8.2">
+<infinispan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:infinispan:config:8.2 http://www.infinispan.org/schemas/infinispan-config-8.2.xsd"
+    xmlns="urn:infinispan:config:8.2">
     <cache-container default-cache="default">
         <local-cache-configuration name="local">
-            <eviction type="COUNT" size="50" strategy="LRU"/>
-            <expiration lifespan="10000" interval="100"/>
+            <eviction type="COUNT" size="50" strategy="LIRS" />
+            <expiration lifespan="10000" interval="100" />
         </local-cache-configuration>
-        <local-cache name="boundedCache" configuration="local"/>
+        <local-cache name="boundedCache" configuration="local" />
     </cache-container>
 </infinispan>
 

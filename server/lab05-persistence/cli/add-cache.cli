@@ -1,0 +1,2 @@
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/distributed-cache=persistentCache:add(configuration=persistent-file-store)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/distributed-cache=persistentPassivatedCache:add(configuration=persistent-file-store-passivation)

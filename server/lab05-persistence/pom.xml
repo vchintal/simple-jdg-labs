@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.everythingjboss.jdg</groupId>
-        <artifactId>embedded</artifactId>
+        <artifactId>server</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>org.everythingjboss.jdg.embedded</groupId>
-    <artifactId>lab02-eviction-expiration</artifactId>
+    <groupId>org.everythingjboss.jdg.server</groupId>
+    <artifactId>lab05-persistence</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -26,7 +26,7 @@
                     <arguments>
                         <argument>-classpath</argument>
                         <classpath />
-                        <argument>org.everythingjboss.jdg.embedded.JDGConsoleApp</argument>
+                        <argument>org.everythingjboss.jdg.server.JDGRemoteClientConsoleApp</argument>
                     </arguments>
                 </configuration>
             </plugin>

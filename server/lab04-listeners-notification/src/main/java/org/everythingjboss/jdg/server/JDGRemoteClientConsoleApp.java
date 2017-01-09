@@ -10,13 +10,13 @@ import org.infinispan.client.hotrod.configuration.ConfigurationBuilder;
 
 public class JDGRemoteClientConsoleApp {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
-		Configuration configuration = new ConfigurationBuilder().build();
-		CountDownLatch cdl = new CountDownLatch(1);
-		
-		RemoteCacheManager cacheManager = new RemoteCacheManager(configuration);
-		RemoteCache<String, String> remoteCache = cacheManager.getCache("listenerCache");
-		remoteCache.addClientListener(new ClusteredClientListener());
-		cdl.await();
-	}
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Configuration configuration = new ConfigurationBuilder().build();
+        CountDownLatch cdl = new CountDownLatch(1);
+        
+        RemoteCacheManager cacheManager = new RemoteCacheManager(configuration);
+        RemoteCache<String, String> remoteCache = cacheManager.getCache("listenerCache");
+        remoteCache.addClientListener(new ClusteredClientListener());
+        cdl.await();
+    }
 }

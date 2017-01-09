@@ -11,19 +11,19 @@ import org.infinispan.client.hotrod.configuration.ConfigurationBuilder;
 
 public class JDGRemoteClientConsoleApp {
 
-	private static final Logger logger = LogManager.getLogger(JDGRemoteClientConsoleApp.class);
+    private static final Logger logger = LogManager.getLogger(JDGRemoteClientConsoleApp.class);
 
-	public static void main(String[] args) throws IOException, InterruptedException {
-		Configuration configuration = new ConfigurationBuilder().build();
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Configuration configuration = new ConfigurationBuilder().build();
 
-		RemoteCacheManager cacheManager = new RemoteCacheManager(configuration);
-		RemoteCache<String, String> remoteCache = cacheManager.getCache("localCache");
-		remoteCache.clear();
-		
-		remoteCache.put("1", "One");
-		remoteCache.put("2", "Two");
+        RemoteCacheManager cacheManager = new RemoteCacheManager(configuration);
+        RemoteCache<String, String> remoteCache = cacheManager.getCache("localCache");
+        remoteCache.clear();
+        
+        remoteCache.put("1", "One");
+        remoteCache.put("2", "Two");
 
-		logger.info("The size of the cache is : {}", remoteCache.size());
-		cacheManager.stop();
-	}
+        logger.info("The size of the cache is : {}", remoteCache.size());
+        cacheManager.stop();
+    }
 }

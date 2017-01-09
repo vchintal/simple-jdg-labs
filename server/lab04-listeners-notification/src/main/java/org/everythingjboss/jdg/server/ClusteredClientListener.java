@@ -7,10 +7,10 @@ import org.infinispan.client.hotrod.event.ClientCacheEntryCreatedEvent;
 
 @ClientListener
 public class ClusteredClientListener {
-	private static final Logger logger = LogManager.getLogger(ClusteredClientListener.class);
+    private static final Logger logger = LogManager.getLogger(ClusteredClientListener.class);
 
-	@ClientCacheEntryCreated
-	public void cacheEntryCreated(ClientCacheEntryCreatedEvent<String> event) {
-		logger.info("Cache Entry created with key " + event.getKey());
-	}
+    @ClientCacheEntryCreated
+    public void cacheEntryCreated(ClientCacheEntryCreatedEvent<String> event) {
+        logger.info("Cache Entry created with key " + event.getKey());
+    }
 }
