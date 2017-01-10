@@ -24,6 +24,7 @@ public class JDGRemoteClientConsoleApp {
 
         logger.info("The size of the cache before expiration is : {}", remoteCache.size());
 
+        // Sleep beyond the lifespan of cache entries
         Thread.sleep(11000);
 
         logger.info("The size of the cache after expiration is : {}", remoteCache.size());

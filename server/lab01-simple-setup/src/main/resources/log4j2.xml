@@ -15,8 +15,7 @@
         </File>
     </Appenders>
     <Loggers>
-        <Logger name="org.everythingjboss" level="info"
-            additivity="false">
+        <Logger name="org.everythingjboss" level="info" additivity="false">
             <AppenderRef ref="Console" />
         </Logger>
         <Logger name="org.jgroups" level="info" additivity="false">

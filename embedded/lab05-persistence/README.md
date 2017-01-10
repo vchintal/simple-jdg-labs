@@ -4,7 +4,7 @@
 
 This lab demonstrates how to instantiate a simple **JBoss Data Grid** cache backed by a file based cache store for durability or just to offload entries ([documentation](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Data_Grid/7.0/html-single/Administration_and_Configuration_Guide/index.html#Single_File_Store_Configuration_Library_Mode)).
 
-There is usually no change to how the clients interact with the cache. The change is all in the how the cache is configured.
+There is usually no change to how the clients interact with the cache. The change is only in the how the cache is configured.
 
 The lab should be run in three ways with the cache configuration having:
 1. No eviction (eviction configuration should be commented out)

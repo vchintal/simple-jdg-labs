@@ -44,5 +44,5 @@ There is no additional setup requirement for **library** mode labs but for worki
 4. When it is time to work with the server (in domain mode), run the following command:
 
    ```sh
-   $JDG_HOME/bin/domain.sh --domain-config=demo-domain.xml --host-config=demo-config.xml
+   $JDG_HOME/bin/domain.sh --domain-config=demo-domain.xml --host-config=demo-host.xml
    ```   
