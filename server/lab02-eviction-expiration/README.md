@@ -8,7 +8,7 @@ Follow your instructor's instructions on how to scale the cluster from 2 nodes t
 
 ### Lab Description
 
-This lab demonstrates how to work with a remote yet local (mode) **JBoss Data Grid** cache configured with eviction and expiry that is running in a server instance and notice its behavior. 
+This lab demonstrates how to work with a remote yet local (mode) **JBoss Data Grid** cache configured with eviction and expiry that is running in a server instance and notice its behavior. Refer to the [documentation](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Data_Grid/7.0/html-single/Administration_and_Configuration_Guide/index.html#chap-Set_Up_Eviction) (sections 2 and 3 of JVM Memory Management)
 
 #### Configuration
 We first need to build (remote) configuration that is required to instantiate the **RemoteCacheManager**. The default configuration by default points to the server running locally (127.0.0.1) and at port (11222). 

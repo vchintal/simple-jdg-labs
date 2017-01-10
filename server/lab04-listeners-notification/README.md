@@ -8,7 +8,7 @@ Follow your instructor's instructions on how to scale the cluster from 1 node to
 
 ### Lab Description
 
-This lab demonstrates how to listen to cache events on a remote **JBoss Data Grid** cache.
+This lab demonstrates how to listen to cache events on a remote **JBoss Data Grid** cache. Refer to the [documentation](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Data_Grid/7.0/html-single/Developer_Guide/index.html#sect-Remote_Event_Listeners_Hot_Rod) here for more details.
 
 #### Configuration
 We first need to build (remote) configuration that is required to instantiate the **RemoteCacheManager**. The default configuration by default points to the server running locally (127.0.0.1) and at port (11222). 
