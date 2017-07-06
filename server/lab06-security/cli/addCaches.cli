@@ -1,0 +1,12 @@
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/security=SECURITY:add()
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/security=SECURITY/authorization=AUTHORIZATION:add(mapper=org.infinispan.security.impl.IdentityRoleMapper)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/security=SECURITY/authorization=AUTHORIZATION/role=writer:add(name=writer,permissions=[WRITE,READ,BULK_WRITE,BULK_READ])
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/security=SECURITY/authorization=AUTHORIZATION/role=reader:add(name=reader,permissions=[READ,BULK_READ])
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/security=SECURITY/authorization=AUTHORIZATION/role=admin:add(name=admin,permissions=[ADMIN])
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/distributed-cache-configuration=secure-cache-configuration:add()
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/distributed-cache-configuration=secure-cache-configuration/security=SECURITY:add()
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/configurations=CONFIGURATIONS/distributed-cache-configuration=secure-cache-configuration/security=SECURITY/authorization=AUTHORIZATION:add(roles=[reader,writer],enabled=true)
+/profile=clustered/subsystem=datagrid-infinispan/cache-container=clustered/distributed-cache=secureCache:add(configuration=secure-cache-configuration)
+/profile=clustered/subsystem=datagrid-infinispan-endpoint/hotrod-connector=hotrod-connector/authentication=AUTHENTICATION:add(security-realm=ApplicationRealm)
+/profile=clustered/subsystem=datagrid-infinispan-endpoint/hotrod-connector=hotrod-connector/authentication=AUTHENTICATION/sasl=SASL:add(mechanisms=[DIGEST-MD5],qop=[auth],server-name=hotrodserver)
+:reload-servers

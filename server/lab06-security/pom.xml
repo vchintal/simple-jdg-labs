@@ -7,7 +7,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<groupId>org.everythingjboss.jdg.server</groupId>
-	<artifactId>lab03-clustering</artifactId>
+	<artifactId>lab06-security</artifactId>
 	<build>
 		<plugins>
 			<plugin>
